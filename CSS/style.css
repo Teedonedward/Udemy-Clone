@@ -43,11 +43,12 @@ nav {
     background: white;
     margin: 0;
     padding: 5px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.699);
+    z-index: 5;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.699);
 }
 
 .logo {
-    width: 50px;
+    width: 100px;
     height: auto;
     display: inline-block;
 }
@@ -83,6 +84,7 @@ nav ul li a {
     background-image: url('../Images/header.jpg');
     background-size: cover;
     background-position: center;
+    z-index: 1;
 }
 
 .header-text {
