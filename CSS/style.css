@@ -446,14 +446,13 @@ nav ul li a {
     width: 80%;
     flex-basis: 33.3%;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     margin: 20px;
 }
 
 .brands img {
-    width: 150px;
-    padding: 5px;
+    display: flex;
+    width: 100px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -578,6 +577,8 @@ nav ul li a {
 }
 
 .footer ul {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
