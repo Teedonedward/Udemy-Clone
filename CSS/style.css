@@ -15,7 +15,7 @@
 
 body {
     background-color: var(--White);
-    color: var(--Grey)
+    color: var(--Grey);
     font-family: Udemy sans;
     font-size: 12px;
     margin: 0;
@@ -50,7 +50,6 @@ nav {
     width: 50px;
     height: auto;
     display: inline-block;
-    float: left;
 }
 
 ul {
@@ -272,7 +271,7 @@ nav ul li a {
 
 .Services {
     display: flex;
-    width: 100%
+    width: 100%;
     padding: 5px;
     overflow-x: auto;
     flex-wrap: space-around;
@@ -436,6 +435,23 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     line-height: 25px;
+}
+
+.brands {
+    display: flex;
+    width: 80%;
+    flex-basis: 33.3%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.brands img {
+    width: 150px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .upskill {
