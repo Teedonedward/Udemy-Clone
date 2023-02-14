@@ -10,12 +10,13 @@
     --Black: #000;
     --lite-Grey: #f4f4f4;
     --Grey: #f1f1f1;
+    --text-Grey: #090909;
     --Transparent-Gold: rgba(165,124,0,0.05);
 }
 
 body {
     background-color: var(--White);
-    color: var(--Grey);
+    color: var(--text-Grey);
     font-family: Udemy sans;
     font-size: 12px;
     margin: 0;
@@ -383,7 +384,7 @@ nav ul li a {
 .topics ul {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .topics ul li {
