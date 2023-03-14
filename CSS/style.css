@@ -11,7 +11,7 @@
     --lite-Grey: #f4f4f4;
     --Grey: #f1f1f1;
     --text-Grey: #272727;
-    --Transparent-Gold: rgba(165,124,0,0.05);
+    --Transparent-Gold: rgba(165, 124, 0, 0.05);
 }
 
 body {
@@ -23,10 +23,9 @@ body {
 }
 
 button {
-    display: inline-block;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 5px 20px;
     padding: 10px;
     background: var(--White);
@@ -35,7 +34,8 @@ button {
     font-size: 16px;
     font-weight: bold;
     color: var(--Black);
-    text-align: left;;
+    text-align: left;
+    ;
 }
 
 nav {
@@ -49,7 +49,7 @@ nav {
 }
 
 .logo {
-    width: 100px;
+    width: 150px;
     height: auto;
     display: inline-block;
 }
@@ -70,16 +70,23 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     color: rgb(202, 4, 53);
     padding: 0 10px;
     justify-content: center;
     align-items: center;
 }
 
+nav ul li a:hover {
+    font-size: 19px;
+    color: rgb(58, 4, 17);
+    padding: 0 9px;
+    transition: all 500ms ease-in;
+}
+
 .header-img {
     width: 100%;
-    height: 250px;
+    height: 500px;
     margin: 0 auto;
     padding: 0;
     background-image: url('../Images/header.jpg');
@@ -137,6 +144,15 @@ nav ul li a {
     height: 20px;
     color: var(--Black);
     z-index: 5;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px 30px;
 }
 
 .drop-header {
@@ -291,15 +307,15 @@ nav ul li a {
 }
 
 .Service {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     display: flex;
     padding: 10px;
-    box-shadow: 0,1px,5px,5px,rgba(0,0,0,0.12);
+    box-shadow: 0, 1px, 5px, 5px, rgba(0, 0, 0, 0.12);
 }
 
 .s1 img {
-    width: 50px;
+    width: 200px;
     margin: 5px;
     background: white;
 }
@@ -314,6 +330,7 @@ nav ul li a {
 
 .s2 h3 {
     color: var(--Black);
+    font-size: 18px;
     font-weight: bold;
     padding: 5px 0;
     text-align: left;
@@ -321,22 +338,22 @@ nav ul li a {
 
 .s2 p {
     width: 100%;
-    padding: 5px 0px;
+    padding: 10px 0px;
     font-size: 14px;
     text-align: left;
 }
 
 .s2 h2 {
     text-align: left;
-    padding: 5px 0px;
+    padding: 10px 0px;
 }
 
 .s2 a {
-    width: 70px;
+    width: 50%;
     color: var(--Black);
     background: #CEBC23;
     font-size: 14px;
-    padding: 5px;
+    padding: 10px 10px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -363,12 +380,14 @@ nav ul li a {
     width: 100%;
     padding: 5px;
     margin: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .topics {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 10px 20px;
     margin: 5px;
 }
 
@@ -398,6 +417,11 @@ nav ul li a {
     color: var(--purple);
 }
 
+.topics ul li a:hover {
+    color: rgb(202, 4, 53);
+    transition: all 500ms ease-in;
+}
+
 .topics ul li p {
     padding: 10px 5px;
 }
@@ -408,13 +432,75 @@ nav ul li a {
     color: var(--Black);
     padding: 10px;
     border: 1px solid var(--Black);
-    margin: 10px;
+    margin: 10px auto;
     margin-top: -10px;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
+}
+
+#button:hover {
+    padding: 11px;
+    margin-top: -11px;
+    border: 2px solid var(--Black);
+    transition: all 1000ms ease-in;
+}
+
+@media (max-width: 991px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    nav ul li a:hover {
+        font-size: 15px;
+    }
+
+    .header-img {
+        height: 250px;
+    }
+
+    .Service {
+        width: 200px;
+        height: 200px;
+    }
+
+    .s1 img {
+        width: 50px;
+    }
+
+    .s2 h3 {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .s2 p {
+        padding: 5px 0px;
+    }
+
+    .s2 h2 {
+        padding: 5px 0px;
+    }
+
+    .s2 a {
+        padding: 5px;
+    }
+    .topic {
+        display: flex;
+        flex-basis: 50%;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+    .topics {
+        padding: 5px;
+    }
 }
 
 .trust {
@@ -446,18 +532,15 @@ nav ul li a {
 
 .brands {
     display: flex;
-    width: 80%;
-    flex-basis: 33.3%;
-    flex-wrap: wrap;
-    margin: 20px;
+    width: 40%;
+    margin: 20px auto;
 }
 
 .brands img {
-    display: flex;
-    width: 100px;
-    padding: 10px;
+    width: 50px;
     justify-content: center;
     align-items: center;
+    margin: 10px auto;
 }
 
 .upskill {
@@ -486,8 +569,6 @@ nav ul li a {
 .upskill ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     margin: 10px 20px;
 }
@@ -496,11 +577,14 @@ nav ul li a {
     font-size: 20px;
     color: var(--Black);
     padding: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .udemy-business {
     width: 90%;
-    margin: 10px;
+    margin: 10px auto;
     padding: 15px;
     text-align: center;
     justify-content: center;
@@ -509,9 +593,16 @@ nav ul li a {
     background: var(--Black);
 }
 
+.udemy-business:hover {
+    padding: 16px;
+    border: 2px solid var(--White);
+    box-shadow: 2px 2px 5px var(--Black);
+    transition: all 1000ms ease-in;
+}
+
 .learn-more {
     width: 90%;
-    margin: 10px;
+    margin: 10px auto;
     padding: 15px;
     text-align: center;
     justify-content: center;
@@ -519,6 +610,12 @@ nav ul li a {
     color: var(--Black);
     background: var(--White);
     border: 1px solid var(--Black);
+}
+
+.learn-more:hover {
+    padding: 16px;
+    border: 2px solid var(--Black);
+    transition: all 1000ms ease-in;
 }
 
 .spread {
@@ -559,7 +656,14 @@ nav ul li a {
     padding: 15px;
     font-size: 15px;
     font-weight: bold;
-} 
+}
+
+.spread a:hover {
+    padding: 16px;
+    border: 2px solid var(--White);
+    box-shadow: 2px 2px 5px var(--Black);
+    transition: all 1000ms ease-in;
+}
 
 .footer {
     margin: 0 auto;
@@ -595,6 +699,11 @@ nav ul li a {
     color: var(--White);
     font-size: 15px;
     text-align: left;
+}
+
+.footer ul li a:hover {
+    color: rgb(202, 4, 53);
+    transition: all 500ms ease-in;
 }
 
 .footer img {
